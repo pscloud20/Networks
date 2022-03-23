@@ -61,9 +61,12 @@ class pref_attach:
         
             
             
-#%% 
+#%%
+n=10
 k = np.zeros(n)
-n = 10
+
+
+
 for i in range(10):
     k[i] = 5
 
