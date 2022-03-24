@@ -37,6 +37,7 @@ histogram  = [list(degrees.values()).count(i)/float(nx.number_of_nodes(G)) for i
 plt.figure()
 plt.plot(degree_values, histogram, 'x')
 
+
 #%%
 
 class pref_attach:
