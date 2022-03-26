@@ -15,10 +15,10 @@ import sys
 
 sys.getrecursionlimit()
 
-nodes_init = 1
-nodes_final = 250
+nodes_init = 12
+nodes_final = 100000
 new_N_nodes = nodes_init
-m = 2
+m = 7
 G = nx.complete_graph(nodes_init)
 new_N_nodes = nodes_init
 count= 0 
@@ -68,18 +68,20 @@ def edge_add_rnd():
 
 #Iterative program 
 
-for i in tqdm(range(nodes_final - nodes_init)):
-    sleep(0.01)
+# =============================================================================
+# for i in tqdm(range(nodes_final - nodes_init)):
+#     sleep(0.01)
+# =============================================================================
     
 
-    for i in range(1):
-            G.add_node(nodes_init + count)
+for i in range(nodes_final -nodes_init):
+    G.add_node(nodes_init + count)
         #print((new_N_nodes + count + 1))
         
-            count += 1
-            for j in range(0,m):
-                edge_add_rnd() #built in networkx function to add edge
-                new_N_nodes  = new_N_nodes +1
+    count += 1
+    for j in range(0,m):
+        edge_add_rnd() #built in networkx function to add edge
+        new_N_nodes  = new_N_nodes +1
                 
 
 if show_network == True:

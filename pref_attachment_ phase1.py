@@ -63,17 +63,8 @@ class pref_attach:
             
             
 #%%
-n=10
-k = np.zeros(n)
-
-
-
-for i in range(10):
-    k[i] = 5
-
-print(k)
-
-
+import BA_model
+import degree_dist
 
 
 
